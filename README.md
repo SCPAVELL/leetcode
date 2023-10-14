@@ -22,3 +22,15 @@
 		}
 		return num;
 	}
+
+[Number of Employees Who Met the Target](https://leetcode.com/problems/number-of-employees-who-met-the-target/description/)
+
+	public int numberOfEmployeesWhoMetTarget(int[] hours, int target) {
+		int time = 0;
+		for (int num : hours) {
+			if (num >= target) {
+				time += 1;
+			}
+		}
+		return time;
+	}
