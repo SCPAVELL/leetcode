@@ -120,3 +120,23 @@
 	        return sum;
 	    }
 
+
+[1828. Queries on Number of Points Inside a Circle](https://leetcode.com/problems/queries-on-number-of-points-inside-a-circle/description/)
+
+	public int[] countPoints(int[][] points, int[][] queries) {
+	        int [] nums= new int[queries.length];
+	        int count;
+	        for(int i=0;i<queries.length;i++){
+	            count=0;
+	            for(int j=0;j<points.length;j++){
+	                if((queries[i][0]-points[j][0])*
+	                  (queries[i][0]-points[j][0])+
+	                  (queries[i][1]-points[j][1])*
+	                  (queries[i][1]-points[j][1])
+	                  <=queries[i][2]*queries[i][2])
+	                  count++;
+	            }
+	            nums[i]=count;
+	        }
+	        return nums;
+	    }
