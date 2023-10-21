@@ -209,3 +209,23 @@
 	}
 
 
+[2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences/description/)
+
+	 public int[] leftRightDifference(int[] nums) {
+	        int left=0;
+	    for(int i=0;i<nums.length;i++)
+	    {
+	          left+=nums[i];
+	    }
+	    int right=0;
+	    int arr[]=new int[nums.length];
+	    for(int i=0;i<nums.length;i++)
+	    {
+	        left-=nums[i];
+	        arr[i]=Math.abs(right-left);
+	        right+=nums[i];
+	    }
+	    return arr;
+	    }
+
+
