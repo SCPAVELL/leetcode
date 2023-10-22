@@ -290,3 +290,22 @@
 		String combined2 = String.join("", word2);
 		return combined1.equals(combined2);
 	}
+
+
+[2535. Difference Between Element Sum and Digit Sum of an Array](https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/description/)
+
+
+	public int differenceOfSum(int[] nums) {
+		int sum = 0;
+		int digitSum = 0;
+		
+		for (int i : nums) {
+			sum += i;
+			
+			while (i > 0) {
+				digitSum += i % 10;
+				i = i / 10;
+			}
+		}
+		return Math.abs(sum - digitSum);
+	}
