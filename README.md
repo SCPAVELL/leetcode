@@ -228,4 +228,21 @@
 		return arr;
 	}
 
+[1389. Create Target Array in the Given Order](https://leetcode.com/problems/create-target-array-in-the-given-order/description/)
+
+
+	 public int[] createTargetArray(int[] nums, int[] index) {
+			List<Integer> arr = new ArrayList<Integer>();
+			int[] ans = new int[nums.length];
+	
+			for (int i = 0; i < nums.length; i++) {
+				arr.add(index[i], nums[i]);
+			}
+			for (int j = 0; j < arr.size(); j++) {
+				ans[j] = arr.get(j);
+			}
+			return ans;
+	
+		}
+
 
