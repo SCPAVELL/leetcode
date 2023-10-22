@@ -245,4 +245,23 @@
 	
 		}
 
+[1313. Decompress Run-Length Encoded List](https://leetcode.com/problems/decompress-run-length-encoded-list/description/)
+
+	public int[] decompressRLElist(int[] nums) {
+		int k = 0;
+
+		for (int i = 0; i < nums.length; i += 2) {
+			k += nums[i];
+		}
+
+		int[] arr = new int[k];
+
+		int x = 0;
+		for (int i = 0; i < nums.length; i += 2) {
+			for (int j = 0; j < nums[i]; j++) {
+				arr[x++] = nums[i + 1];
+			}
+		}
+		return arr;
+	}
 
