@@ -345,3 +345,28 @@ v# leetcode
 		        // so the string is valid, otherwise, there are unmatched opening brackets, so return false
 		        return stack.isEmpty();
 		    }
+
+
+[1021. Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/description/)
+
+	
+	      public String removeOuterParentheses(String s) {
+	        int count = 0;
+	        StringBuilder result = new StringBuilder();
+	
+	        for (char c : s.toCharArray()) {
+	            if (c == '(') {
+	                if (count != 0) {
+	                    result.append(c);
+	                }
+	                count++;
+	            } else {
+	                if (count != 1) {
+	                    result.append(c);
+	                }
+	                count--;
+	            }
+	        }
+	
+	        return result.toString();
+	    }
