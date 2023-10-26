@@ -383,3 +383,40 @@ v# leetcode
 	        }
 	        return max;
 	    }
+
+
+
+
+[1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/description/)
+
+	      public int countCharacters(String[] words, String chars) {
+	         HashMap<Character, Integer> myMap = new HashMap<>();
+	      int res = 0;
+	        
+	      for(char ch : chars.toCharArray())
+	          myMap.put(ch, myMap.getOrDefault(ch, 0) + 1);
+	      
+	      for(String word: words)
+	      {
+	          HashMap<Character, Integer> count = new HashMap<>();
+	          int i = 0;
+	          
+	          for(; i < word.length(); i++)
+	          {
+	              char ch = word.charAt(i);
+	              
+	              if(myMap.containsKey(ch)) 
+	              {
+	                  if(count.containsKey(ch) && count.get(ch) + 1 > myMap.get(ch))
+	                      break;
+	                  count.put(ch, count.getOrDefault(ch, 0) + 1);
+	              } 
+	              else
+	                  break;
+	          }
+	          if(i == word.length())
+	              res += word.length();
+	      }
+	      
+	      return res;
+	    }
