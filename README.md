@@ -420,3 +420,30 @@ v# leetcode
 	      
 	      return res;
 	    }
+
+
+
+[349. Intersection of Two Arrays](https://github.com/SurikovDA/Automation-of-accounting/blob/main/src/MonthlyReport.java)
+
+		public int[] intersection(int[] nums1, int[] nums2) {
+	         HashSet<Integer> set1 = new HashSet<>();
+	        HashSet<Integer> set2 = new HashSet<>();
+	
+	        for (int n : nums1) {
+	            set1.add(n);
+	        }
+	
+	        for (int n : nums2) {
+	            if (set1.contains(n))
+	                set2.add(n);
+	        }
+	
+	        int [] result = new int[set2.size()];
+	            int index = 0;
+	        for (int n : set2){
+	            result[index++] = n;
+	        }
+	        
+	        return result;
+	    }
+	
