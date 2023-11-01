@@ -1,4 +1,4 @@
-v# leetcode
+# leetcode
 
 [ Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/description/)
 
@@ -515,3 +515,20 @@ v# leetcode
 		}
 		return ans.toString();
 	}
+
+
+
+[2309. Greatest English Letter in Upper and Lower Case](https://leetcode.com/problems/greatest-english-letter-in-upper-and-lower-case/description/)
+
+	public String greatestLetter(String s) {
+	        boolean[] seen = new boolean[58];
+	        for(char ch : s.toCharArray()){
+	            seen[ch-65]=true;
+	        }
+	        for(int i=57; i>31;i--){
+	            if(seen[i] && seen[i-32])
+	                return (char)(i+33)+"";
+	        }
+	        return "";
+	    }
+ 
