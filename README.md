@@ -79,7 +79,7 @@
 		HashMap<Character, Integer> map = new HashMap<>();
 		for (Character i : stones.toCharArray()) {
 			map.put(i, map.getOrDefault(i, 0) + 1);
-		}
+			}
 		int sum = 0;
 		for (Character i : jewels.toCharArray()) {
 			if (map.get(i) != null)
