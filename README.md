@@ -536,24 +536,24 @@
 [2506. Count Pairs Of Similar Strings](https://leetcode.com/problems/count-pairs-of-similar-strings/description/)
 
 	 public int similarPairs(String[] words) {
-	        Map<Integer, Integer> group = new HashMap<>();
-	    for (String word : words) {
-	      group.merge(convert(word), 1, Integer::sum);
-	    }
-	
-	    int count = 0;
-	    for (int value : group.values()) {
-	      count += value * (value - 1) / 2;
-	    }
-	
-	    return count;
-	  }
-	
-	  private int convert(String word) {
-	    int n = 0;
-	    for (char c : word.toCharArray()) {
-	      n |= 1 << (c - 'a');
-	    }
-	
-	    return n;
-	    }
+	       Map<Integer, Integer> group = new HashMap<>();
+		for (String word : words) {
+			group.merge(convert(word), 1, Integer::sum);
+		}
+
+		int count = 0;
+		for (int value : group.values()) {
+			count += value * (value - 1) / 2;
+		}
+
+		return count;
+	}
+
+	private int convert(String word) {
+		int n = 0;
+		for (char c : word.toCharArray()) {
+			n |= 1 << (c - 'a');
+		}
+
+		return n;
+	}
