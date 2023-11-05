@@ -374,7 +374,6 @@
 
 [561. Array Partition](https://leetcode.com/problems/array-partition/description/)
 
-
 		public int arrayPairSum(int[] nums) {
 	        int max = 0;
 	        Arrays.sort(nums);
