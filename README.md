@@ -571,3 +571,16 @@
 			return count;
 	
 		}
+
+[1816. Truncate Sentence](https://leetcode.com/problems/truncate-sentence/description/)
+
+
+	public String truncateSentence(String s, int k) {
+		String[] sp = s.split(" ");
+		String print = "";
+
+		for (int i = 0; i < k; i++) {
+			print += " " + sp[i];
+		}
+		return print.trim();
+	}
