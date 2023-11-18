@@ -574,7 +574,6 @@
 
 [1816. Truncate Sentence](https://leetcode.com/problems/truncate-sentence/description/)
 
-
 	public String truncateSentence(String s, int k) {
 		String[] sp = s.split(" ");
 		String print = "";
@@ -697,7 +696,7 @@
 	                ans = Math.max(ans, e-i);
 	            }
 	        }
-	        return ans;
+	       	 return ans;
 	    }
 
 
