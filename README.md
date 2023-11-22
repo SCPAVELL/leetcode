@@ -496,8 +496,7 @@
 				letters.put(key.charAt(i), original++);
 			}
 		}
-		// After the first pass all the letters of the key will be mapped with their
-		// respective original letters.
+		
 		for (int i = 0; i < message.length(); i++) {
 			if (letters.containsKey(message.charAt(i))) {
 				// Now replacing the letters of the message with appropriate letter according to
