@@ -70,6 +70,7 @@
 		for (String sentence : sentences) {
 			count = Math.max(count, sentence.split(" ").length);
 		}
+  
 		return count;
 	}
 
