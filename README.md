@@ -792,3 +792,17 @@
 		}
 		return count;
 	}
+
+
+[1832. Check if the Sentence Is Pangram](https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/)
+
+	public boolean checkIfPangram(String sentence) {
+		HashMap<Character, Integer> map = new HashMap<>();
+		for (int i = 0; i < sentence.length(); i++) {
+			map.put(sentence.charAt(i), 0);
+			if (map.size() == 26) {
+				return true;
+			}
+		}
+		return false;
+	}
