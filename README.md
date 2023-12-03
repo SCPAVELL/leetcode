@@ -769,3 +769,26 @@
 		Arrays.sort(nums);
 		return (nums[nums.length - 2] - 1) * (nums[nums.length - 1] - 1);
 	}
+
+
+[1684. Count the Number of Consistent Strings](https://leetcode.com/problems/count-the-number-of-consistent-strings/description/)
+
+
+	public int countConsistentStrings(String allowed, String[] words) {
+		HashSet<Character> set = new HashSet<>();
+		for (char ch : allowed.toCharArray()) {
+			set.add(ch);
+		}
+		int count = 0;
+		for (String str : words) {
+			int i = 0;
+			for (char ch : str.toCharArray()) {
+				if (!set.contains(ch))
+					break;
+				i++;
+			}
+			if (i == str.length())
+				count++;
+		}
+		return count;
+	}
