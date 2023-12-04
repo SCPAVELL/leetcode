@@ -806,3 +806,17 @@
 		}
 		return false;
 	}
+
+
+[2657. Find the Prefix Common Array of Two Arrays](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/)
+
+	public int[] findThePrefixCommonArray(int[] A, int[] B) {
+		Set<Integer> set = new HashSet<Integer>();
+		int[] ans = new int[A.length];
+		for (int i = 0; i < ans.length; i++) {
+			set.add(A[i]);
+			set.add(B[i]);
+			ans[i] = 2 * (i + 1) - set.size();
+		}
+		return ans;
+	}
