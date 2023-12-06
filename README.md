@@ -838,3 +838,16 @@
 		}
 		return sum;
 	}
+
+[387. First Unique Character in a String](https://leetcode.com/problems/first-unique-character-in-a-string/description/)
+
+	public int firstUniqChar(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			int c = s.charAt(i);
+			if (i == s.lastIndexOf(c) && i == s.indexOf(c)) {
+				return i;
+			}
+		}
+
+		return -1;
+	}
