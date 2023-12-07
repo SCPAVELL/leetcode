@@ -70,7 +70,6 @@
 		for (String sentence : sentences) {
 			count = Math.max(count, sentence.split(" ").length);
 		}
-  
 		return count;
 	}
 
@@ -101,7 +100,7 @@
             }
             maxSum = Math.max(maxSum, sum);
         }
-        return maxSum;
+       	 return maxSum;
 	}
 
 [1528. Shuffle String](https://leetcode.com/problems/shuffle-string/description/)
