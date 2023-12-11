@@ -850,3 +850,22 @@
 
 		return -1;
 	}
+
+
+
+[1436. Destination City](https://leetcode.com/problems/destination-city/description/)
+
+	public String destCity(List<List<String>> paths) {
+	        Set<String> startPoints = new HashSet<>();
+	        for(List<String> path : paths){
+	            startPoints.add(path.get(0));
+	        }
+	        String res = null;
+	        for(List<String> path : paths){
+	            if(!startPoints.contains(path.get(1))){
+	                res = path.get(1);
+	                break;
+	            }
+	        }
+	        return res;
+	    }
