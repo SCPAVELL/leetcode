@@ -464,11 +464,9 @@
 				h.add(nums1[top]);
 				top ++;
 				bottom ++;
-			}
-			else if (nums1[top] < nums2[bottom]){
+			}else if (nums1[top] < nums2[bottom]){
 				top ++;
-			}
-			else if (nums1[top] > nums2[bottom]){
+			}else if (nums1[top] > nums2[bottom]){
 				bottom ++;
 			}
 		}
