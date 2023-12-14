@@ -383,7 +383,6 @@
 
 
 
-
 [1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/description/)
 
 	      public int countCharacters(String[] words, String chars) {
@@ -402,16 +401,13 @@
 	          {
 	              char ch = word.charAt(i);
 	              
-	              if(myMap.containsKey(ch)) 
-	              {
+	              if(myMap.containsKey(ch)) {
 	                  if(count.containsKey(ch) && count.get(ch) + 1 > myMap.get(ch))
 	                      break;
 	                  count.put(ch, count.getOrDefault(ch, 0) + 1);
-	              } 
-	              else
+	              } else
 	                  break;
-	          }
-	          if(i == word.length())
+	          } if(i == word.length())
 	              res += word.length();
 	      }
 	      
