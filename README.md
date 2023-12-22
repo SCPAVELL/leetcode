@@ -382,7 +382,6 @@
 	    }
 
 
-
 [1160. Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/description/)
 
 	      public int countCharacters(String[] words, String chars) {
@@ -436,7 +435,6 @@
 	        for (int n : set2){
 	            result[index++] = n;
 	        }
-	        
 	        return result;
 	    }
 
