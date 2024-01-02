@@ -9,7 +9,8 @@
   			ans[index++] = nums[i];
   			ans[index++] = nums[i + n];
   		}
-  		return ans;}
+  		return ans;
+    }
 
 [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/description/)
 
