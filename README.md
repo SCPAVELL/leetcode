@@ -191,8 +191,7 @@
 		for (int i = 1; i < encoded.length + 1; i++) {
 			arr[i] = arr[i - 1] ^ encoded[i - 1];
 		}
-		return arr;
-	}
+		return arr;}
 
 [654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/description/)
 
