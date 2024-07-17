@@ -30,8 +30,7 @@
 			if (num >= target) {
 				time += 1;
 			}
-		}
-		return time;
+		}return time;
 	}
 
  
