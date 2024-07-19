@@ -146,9 +146,7 @@
 					count++;
 			}
 			nums[i] = count;
-		}
-		return nums;
-	}
+		}	return nums;	}
 
 
 [807. Max Increase to Keep City Skyline](https://leetcode.com/problems/max-increase-to-keep-city-skyline/description/)
