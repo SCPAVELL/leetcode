@@ -7,10 +7,8 @@
   		int index = 0;
   		for (int i = 0; i < n; i++) {
   			ans[index++] = nums[i];
-  			ans[index++] = nums[i + n];
-  		}
-  		return ans;
-    }
+  			ans[index++] = nums[i + n];}
+  		return ans;    }
 
 [Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/description/)
 
